@@ -88,6 +88,12 @@ open class LineChartDataSet: LineRadarChartDataSet, ILineChartDataSet
         }
         return circleColors[index]
     }
+
+    /// - Returns: Boolean indicating if the circle should be drawn at a given index
+    /// Defaults to true
+    open func drawCircle(atIndex: Int) -> Bool {
+        return true
+    }
     
     /// Sets the one and ONLY color that should be used for this DataSet.
     /// Internally, this recreates the colors array and adds the specified color.

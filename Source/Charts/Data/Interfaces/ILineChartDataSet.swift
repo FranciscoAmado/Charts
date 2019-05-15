@@ -41,6 +41,10 @@ public protocol ILineChartDataSet: ILineRadarChartDataSet
     /// - Returns: The color at the given index of the DataSet's circle-color array.
     /// Performs a IndexOutOfBounds check by modulus.
     func getCircleColor(atIndex: Int) -> NSUIColor?
+
+    /// - Returns: Boolean indicating if the circle should be drawn at a given index
+    /// Defaults to true
+    func drawCircle(atIndex: Int) -> Bool
     
     /// Sets the one and ONLY color that should be used for this DataSet.
     /// Internally, this recreates the colors array and adds the specified color.

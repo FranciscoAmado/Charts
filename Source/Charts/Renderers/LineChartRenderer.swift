@@ -633,6 +633,11 @@ open class LineChartRenderer: LineRadarRenderer
                     continue
                 }
 
+                if dataSet.drawCircle(atIndex: j) == false
+                {
+                    continue
+                }
+
                 context.setFillColor(dataSet.getCircleColor(atIndex: j)!.cgColor)
 
                 rect.origin.x = pt.x - circleRadius
